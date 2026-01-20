@@ -480,6 +480,11 @@ export default class EverflowSDK {
               );
               resolve(response.transaction_id);
             }
+            else
+            {
+              console.log('[everflow-sdk] No click id generated due to Everflow rules');
+              resolve("");
+            }
           });
       });
     });
